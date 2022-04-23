@@ -1,0 +1,39 @@
+<!-- {{pokemon.id}}
+{{pokemon.name}}
+{{pokemon.types}}
+{{pokemon.picture}}
+{{pokemon.hp}}
+{{pokemon.cp}}
+{{pokemon.created || date: "dd,mm,yyyy"}} -->
+
+
+
+<ul class="list-groupcd ">
+    <li class="list-group-item d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="{{pokemon.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{pokemon.name}}</h5>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+              <li class="list-group-item">{{pokemon.types}}</li>
+              <li class="list-group-item">{{pokemon.hp}}</li>
+              <li class="list-group-item">{{pokemon.cp}}</li>
+              <li class="list-group-item">{{pokemon.created | date:'dd,mm,yyyy'}}</li>
+            </ul>
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button class="btn btn-primary" [routerLink]="['/edit',pokemon.id]" type="button">Modifier</button>
+              <button class="btn btn-danger" (click)="remouvepokemon()"  type="button">Supprimer</button>
+              <button routerLink="" class="btn btn-primary text-center" type="button" >Retour</button>
+            </div>
+            
+          </div>
+          
+       
+    </li>
+</ul>
+
+<div class="container">
+  <Button class="btn btn-primary" routerLink="/add">Add</Button>
+</div>

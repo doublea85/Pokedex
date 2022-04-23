@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="pokemon.picture" alt="">
+    </div>
+
+    <div class="col-md-8">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-groupe">
+                <label for="name"> Nome du pokemon</label>
+                <input class="form-control" type="text" [(ngModel)] = "pokemon.name" #name="ngModel" name="name">
+
+                <label for="name"> cp du pokemon</label>
+                <input class="form-control" type="text" [(ngModel)] = "pokemon.cp" #name="ngModel" name="cp">
+
+                <label for="name"> hp du pokemon</label>
+                <input class="form-control" type="text" [(ngModel)] = "pokemon.hp" #name="ngModel" name="hp">
+
+                <label for="name"> image du pokemon</label>
+                <input class="form-control" type="text" [(ngModel)] = "pokemon.picture" #name="ngModel" name="picture">
+
+                <button class="btn btn-primary" >Validez</button>
+
+            </div>
+        </form>
+    </div>
+</div>

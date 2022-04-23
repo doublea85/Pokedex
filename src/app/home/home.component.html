@@ -1,0 +1,32 @@
+<!-- <ul class="list-group">
+    <li class="list-group-item" *ngFor="let i of pokemons">
+        <div class="card" style="width: 18rem;">
+            <img src="{{i.picture}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{i.name}}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{i.types}}</li>
+              <li class="list-group-item">{{i.hp}}</li>
+              <li class="list-group-item">{{i.cp}}</li>
+              <li class="list-group-item">{{i.created }}</li>
+            </ul>
+            
+          </div>
+       
+    </li>
+</ul> -->
+
+<section class="container">
+      <span class="text-muted">Vous disposez de {{pokemons.length}} pokemons</span><br>
+      <img src="/assets/pok.png"   *ngFor="let i of pokemons" style="width:50px;"   [title] = "i.name" alt="">
+      <hr>
+    <div class="row">
+        <div class="card col-md-2" *ngFor="let i of pokemons">
+            <a [routerLink]="['/detail',i.id]"><img [src]="i.picture" alt="" ></a>
+
+        </div>
+    </div>
+
+    
+</section>
